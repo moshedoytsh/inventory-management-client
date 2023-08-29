@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="page-title">
+            <h2>inventory management</h2>
+            <div class="links">
+                <button id="go-home"><i class="material-icons">home</i></button>
+                <button id="add-button"><i class="material-icons">add_circle_outline</i></button>
+            </div>
+        </div>
+    </header>
+    <div id="home" class="d-block">
+        <div class="search-bar">
+            <div class="select-category">
+                <button id="all-button">All Product</button>
+                <button id="men-button">Men</button>
+                <button id="women-button">Women</button>
+                <button id="jewelry-button">Jewelry</button>
+                <button id="electronics-button">Electronics</button>
+            </div>
+            <div class="search">
+                <input id="search-input" type="text" placeholder="Search">
+                <button id="search-button"><i class="material-icons">search</i></button>
+            </div>
+        </div>
+        <h1>Products</h1>
+        <div id="products-container"></div>
+    </div>
+    <div id="product-view" class="d-none"></div>
+    <div id="edit-product" class="d-none">
+        <div id="edit-container">
+            <div id="edit-headline" class="form-header"></div>
+            <form id="form-a">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Add Title..." required>
+                <label for="category">Category</label>
+                <input type="text" id="category" placeholder="Add Category..." required>
+                <label for="price">Price</label>
+                <input type="number" id="price" step="0.01" placeholder="Add Price..." required>
+                <label for="image-url">Image URL</label>
+                <input type="text" id="image-url" placeholder="Add Image URL..." required>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" placeholder="Add Quantity...">
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="Add Description..." required>
+                <div class="form-buttons">
+                    <button type="submit" id="submit-form"></button>
+                    <button id="cancel-edit">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>Technical Support<i class="material-icons">phone</i><span>+1.234.567.8900</span></footer>
+    <script type="module" src="./transform-data.js"></script>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
